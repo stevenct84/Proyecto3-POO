@@ -12,16 +12,19 @@ package proyecto3.modelo;
 public class Usuario {
     Tusuario usuario;
     String nombre;
+    String correo;
     String contrasena;
 
     public Usuario() {
     } 
-    
-    public Usuario(Tusuario usuario, String nombre, String contrasena) {
+
+    public Usuario(Tusuario usuario, String nombre, String correo, String contrasena) {
         this.usuario = usuario;
         this.nombre = nombre;
+        this.correo = correo;
         this.contrasena = contrasena;
     }
+    
 
     public Tusuario getUsuario() {
         return usuario;
@@ -45,6 +48,19 @@ public class Usuario {
 
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    @Override
+    public String toString() {
+        return usuario+","+ nombre + "," + correo + "," + contrasena + "\n";
     }
     
     

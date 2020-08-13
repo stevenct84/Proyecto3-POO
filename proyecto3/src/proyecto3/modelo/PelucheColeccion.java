@@ -15,12 +15,25 @@ public class PelucheColeccion extends Peluche{
     public PelucheColeccion() {
     }
 
-    
-    
-
-    public PelucheColeccion(Tconexion conexion, String nombre, float tamano) {
-        super(nombre, tamano);
+    public PelucheColeccion(Tconexion conexion, Tpeluche tipoPeluche, String nombre, float tamano, float precio) {
+        super(tipoPeluche, nombre, tamano, precio);
         this.conexion = conexion;
     }
+
+
+    public Tconexion getConexion() {
+        return conexion;
+    }
+
+    public void setConexion(Tconexion conexion) {
+        this.conexion = conexion;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "," + conexion;
+    }
+
+    
     
 }

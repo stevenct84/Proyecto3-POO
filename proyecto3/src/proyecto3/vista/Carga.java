@@ -5,6 +5,9 @@
  */
 package proyecto3.vista;
 
+import proyeto3.controlador.AdministradorUsuario;
+import proyeto3.controlador.Controlador;
+
 /**
  *
  * @author Jonathan Camacho
@@ -12,21 +15,25 @@ package proyecto3.vista;
 public class Carga {
     public static void main(String[] args) {
         VentanaCarga ventana = new VentanaCarga();
-        //NewSignin sign = new NewSignin();
-        ventana.setVisible(true);
-        try {
+        VentanaLogIn sign = new VentanaLogIn();
+        VentanaAdministrarPeluches admiPeluches=new VentanaAdministrarPeluches();
+        //ventana.setVisible(true);
+        admiPeluches.setVisible(true);
+        Controlador controlador = Controlador.getInstancia(sign,admiPeluches);
+        controlador.cargarArchivos();
+      
+        /*try {
             for (int row = 0; row <= 100; row++) {
-                Thread.sleep(100);
+                Thread.sleep(10);
                 ventana.jLabelNumeroCarga.setText(Integer.toString(row) + "%");
                 ventana.jBarraCarga.setValue(row);
                 if (row == 100) {
-
-                    //screen.setVisible(false);
-                    //sign.setVisible(true);
+                    ventana.setVisible(false);
+                    sign.setVisible(true);
                 }
             }
         } catch (Exception e) {
-        }
+        }*/
     }
 
 }

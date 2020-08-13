@@ -10,17 +10,22 @@ package proyecto3.modelo;
  * @author Jonathan Camacho
  */
 public abstract class Peluche {
+    Tpeluche tipoPeluche;
     String nombre;
     float tamano;
+    float precio;
 
     public Peluche() {
     }
 
-    
-    public Peluche(String nombre, float tamano) {
+    public Peluche(Tpeluche tipoPeluche, String nombre, float tamano, float precio) {
+        this.tipoPeluche = tipoPeluche;
         this.nombre = nombre;
         this.tamano = tamano;
+        this.precio = precio;
     }
+
+    
 
     public String getNombre() {
         return nombre;
@@ -38,10 +43,30 @@ public abstract class Peluche {
         this.tamano = tamano;
     }
 
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
+    public Tpeluche getTipoPeluche() {
+        return tipoPeluche;
+    }
+
+    public void setTipoPeluche(Tpeluche tipoPeluche) {
+        this.tipoPeluche = tipoPeluche;
+    }
+
     @Override
     public String toString() {
-        return "Peluche{" + "nombre=" + nombre + ", tamano=" + tamano + '}';
+        return tipoPeluche + "," + nombre + "," + tamano + "," + precio;
     }
+    
+    
+    
+    
     
     
     

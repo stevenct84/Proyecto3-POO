@@ -15,9 +15,28 @@ public class PelucheRomantico extends Peluche {
     public PelucheRomantico() {
     }
 
-    public PelucheRomantico(Tocasion festividad, String nombre, float tamano) {
-        super(nombre, tamano);
+    public PelucheRomantico(Tocasion festividad, Tpeluche tipoPeluche, String nombre, float tamano, float precio) {
+        super(tipoPeluche, nombre, tamano, precio);
         this.festividad = festividad;
-    }    
+    }
+
+    
+
+
+
+    public Tocasion getFestividad() {
+        return festividad;
+    }
+
+    public void setFestividad(Tocasion festividad) {
+        this.festividad = festividad;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "," + festividad;
+    }
+
+    
     
 }

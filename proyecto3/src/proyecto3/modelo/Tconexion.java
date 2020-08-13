@@ -10,6 +10,6 @@ package proyecto3.modelo;
  * @author Jonathan Camacho
  */
 public enum Tconexion {
-    Serie, Pelicula, Comics, Otro; 
+    Serie, Pelicula, Videojuego, Comics, Otro; 
     
 }
